@@ -8,7 +8,9 @@ export default function MainNavigation() {
   return (
     <>
       <header className={classes.header}>
-        <div>Add and Fetch Records using React and Firebase</div>
+        <div className={classes.logo}>
+          Add and Fetch Records using React and Firebase
+        </div>
         <nav>
           <ul>
             <li>

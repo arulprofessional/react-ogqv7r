@@ -10,16 +10,12 @@ import MainNavigation from './components/layout/MainNavigation';
 
 export default function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<MainNavigation />}>
-            <Route index element={<AllContactsPage />} />
-            <Route path="new-contact" exact element={<NewContactPage />} />
-            <Route path="favorites" exact element={<FavoritesPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainNavigation />}>
+        <Route index element={<AllContactsPage />} />
+        <Route path="new-contact" exact element={<NewContactPage />} />
+        <Route path="favorites" exact element={<FavoritesPage />} />
+      </Route>
+    </Routes>
   );
 }
