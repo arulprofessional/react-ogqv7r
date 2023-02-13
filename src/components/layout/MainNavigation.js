@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style.css';
+// import '../../style.css';
 import { Link, Outlet } from 'react-router-dom';
 
 import classes from './MainNavigation.module.css';
