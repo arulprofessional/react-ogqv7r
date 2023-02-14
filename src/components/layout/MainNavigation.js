@@ -1,8 +1,8 @@
-import React from 'react';
-// import '../../style.css';
-import { Link, Outlet } from 'react-router-dom';
+import React from "react";
+import "../../style.css";
+import { Link, Outlet } from "react-router-dom";
 
-import classes from './MainNavigation.module.css';
+import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
   return (
