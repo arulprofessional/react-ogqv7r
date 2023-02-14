@@ -3,6 +3,8 @@ import "../style.css";
 
 import ContactList from "../components/contact/ContactList";
 
+import Layout from "../components/layout/Layout";
+
 const DUMMY_DATA = [
   {
     id: "c1",
@@ -26,9 +28,9 @@ const DUMMY_DATA = [
 
 export default function AllContactsPage() {
   return (
-    <section>
+    <Layout>
       <h1>All Contacts Page</h1>
       <ContactList items={DUMMY_DATA} />
-    </section>
+    </Layout>
   );
 }
