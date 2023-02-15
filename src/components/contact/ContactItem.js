@@ -11,7 +11,7 @@ export default function ContactItem(props) {
         <div className={classes.item}>
           <h3>{props.data.title}</h3>
           <h4>{props.data.name}</h4>
-          <h4>{props.data.mobileNumber}</h4>
+          <h4>{props.data.phoneNumber}</h4>
           <h4>{props.data.email}</h4>
           <address>{props.data.address}</address>
           <p>{props.data.description}</p>
