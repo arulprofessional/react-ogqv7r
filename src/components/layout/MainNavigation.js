@@ -1,10 +1,13 @@
-import React from "react";
+import { useContext } from "react";
+import FavoritesContext from "../../store/favorites-context";
 import "../../style.css";
 import { Link, Outlet } from "react-router-dom";
 
 import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
+  const favoritesCtx = useContext(FavoritesContext);
+  
   return (
     <>
       <header className={classes.header}>
@@ -20,7 +23,9 @@ export default function MainNavigation() {
               <Link to="/new-contact">Add New Contact</Link>
             </li>
             <li>
-              <Link to="/favorites">My Favorites</Link>
+              <Link to="/favorites">My Favorites
+              <span className={classes.badge} >{favoritesCtx.totalFavorites}</span>
+              </Link>
             </li>
           </ul>
         </nav>
