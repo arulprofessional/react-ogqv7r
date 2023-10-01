@@ -11,7 +11,7 @@ export default function AllContactsPage() {
   useEffect(() => {
     setIsLoading(true);
     fetch(
-      "https://react-getting-started-ccd14-default-rtdb.firebaseio.com/contacts.json"
+      "https://react-getting-started-ccd14-default-rtdb.firebaseio.com/contacts.json",
     )
       .then((response) => {
         return response.json();
@@ -39,10 +39,23 @@ export default function AllContactsPage() {
     );
   }
 
+  let content = <p>You got no Contacts. Start adding some?</p>;
+  if (contactList && contactList.length > 0) {
+    if (contactList[0].id == "error") {
+      let txt = "";
+      for (let x in contactList[0]) {
+        txt += contactList[0][x];
+      }
+      content = <p>There is a problem connecting to Firebase! {txt}</p>;
+    } else {
+      content = <ContactList items={contactList} />;
+    }
+  }
+
   return (
     <Layout>
       <h1>All Contacts Page</h1>
-      <ContactList items={contactList} />
+      {content}
     </Layout>
   );
 }
