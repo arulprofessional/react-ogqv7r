@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import FavoritesContext from "../store/favorites-context";
-import ContactList from "../components/contact/ContactList";
-import Layout from "../components/layout/Layout";
-import "../style.css";
+import React, { useContext } from 'react';
+import FavoritesContext from '../store/favorites-context';
+import ContactList from '../components/contact/ContactList';
+import Layout from '../components/layout/Layout';
+import '../style.css';
 
 export default function FavoritesPage() {
   const favoritesCtx = useContext(FavoritesContext);

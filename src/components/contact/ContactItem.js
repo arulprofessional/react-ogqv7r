@@ -1,9 +1,9 @@
-import { useContext } from "react";
-import "../../style.css";
+import React, { useContext } from 'react';
+import '../../style.css';
 
-import classes from "./ContactItem.module.css";
-import Card from "../ui/Card";
-import FavoritesContext from "../../store/favorites-context";
+import classes from './ContactItem.module.css';
+import Card from '../ui/Card';
+import FavoritesContext from '../../store/favorites-context';
 
 export default function ContactItem(props) {
   const favoritesCtx = useContext(FavoritesContext);
@@ -38,7 +38,7 @@ export default function ContactItem(props) {
         </div>
         <div className={classes.actions}>
           <button onClick={toggleFavoritesStatusHandler}>
-            {itemIsFavorite ? "Remove from Favorites" : "To Favorites"}
+            {itemIsFavorite ? 'Remove from Favorites' : 'To Favorites'}
           </button>
         </div>
       </Card>

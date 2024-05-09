@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import "../style.css";
+import React, { useState, useEffect } from 'react';
+import '../style.css';
 
-import ContactList from "../components/contact/ContactList";
+import ContactList from '../components/contact/ContactList';
 
-import Layout from "../components/layout/Layout";
+import Layout from '../components/layout/Layout';
 
 export default function AllContactsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +11,7 @@ export default function AllContactsPage() {
   useEffect(() => {
     setIsLoading(true);
     fetch(
-      "https://react-getting-started-ccd14-default-rtdb.firebaseio.com/contacts.json"
+      'https://react-getting-started-ccd14-default-rtdb.firebaseio.com/contacts.json'
     )
       .then((response) => {
         return response.json();
