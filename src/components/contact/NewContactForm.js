@@ -1,6 +1,6 @@
-import { useRef } from "react";
-import Card from "../ui/Card";
-import classes from "./NewContactForm.module.css";
+import React, { useRef } from 'react';
+import Card from '../ui/Card';
+import classes from './NewContactForm.module.css';
 
 export default function NewContacForm(props) {
   const titleInputRef = useRef();
