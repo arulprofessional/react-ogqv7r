@@ -8,26 +8,26 @@ import classes from './MainNavigation.module.css';
 export default function MainNavigation() {
   const favoritesCtx = useContext(FavoritesContext);
 
-  // const [isTop, setIsTop] = useState(true);
+  const [isTop, setIsTop] = useState(true);
 
-  // const handleScroll = () => {
-  //   if (window.scrollY > 0) {
-  //     setIsTop(false);
-  //   } else {
-  //     setIsTop(true);
-  //   }
-  // };
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsTop(false);
+    } else {
+      setIsTop(true);
+    }
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <header className={classes.header}>
+      <header className={`${classes.header} ${isTop ? classes.top : ''}`}>
         <div className={classes.logo}>
           Add and Fetch Records using React and Firebase
         </div>
