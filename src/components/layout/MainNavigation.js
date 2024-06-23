@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import FavoritesContext from '../../store/favorites-context';
 import '../../style.css';
 import { Link, Outlet } from 'react-router-dom';
@@ -7,6 +7,23 @@ import classes from './MainNavigation.module.css';
 
 export default function MainNavigation() {
   const favoritesCtx = useContext(FavoritesContext);
+
+  // const [isTop, setIsTop] = useState(true);
+
+  // const handleScroll = () => {
+  //   if (window.scrollY > 0) {
+  //     setIsTop(false);
+  //   } else {
+  //     setIsTop(true);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>
