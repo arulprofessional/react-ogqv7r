@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../style.css';
-
 import ContactList from '../components/contact/ContactList';
-
 import Layout from '../components/layout/Layout';
+
+import '../style.css';
+// import spinner from '../images/spinner.gif';
 
 export default function AllContactsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,14 +26,20 @@ export default function AllContactsPage() {
           };
           contacts.push(contact);
         }
-        setIsLoading(false);
-        setContactList(contacts);
+        setTimeout(() => {
+          setIsLoading(false);
+          setContactList(contacts);
+        }, 3000);
       });
   }, []);
 
   let content = (
     <section>
-      <img src={ require('./images/image1.jpg') } />
+      {/* <img src={spinner} alt="Loading-Spinner" /> */}
+      <img
+        src="https://miro.medium.com/v2/resize:fit:1400/1*CsJ05WEGfunYMLGfsT2sXA.gif"
+        alt="Loading-Spinner"
+      />
     </section>
   );
   if (!isLoading) {
