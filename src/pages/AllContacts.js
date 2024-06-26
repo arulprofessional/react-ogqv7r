@@ -33,7 +33,7 @@ export default function AllContactsPage() {
 
   let content = (
     <section>
-      <p>Loading...</p>
+      <img src={ require('./images/image1.jpg') } />
     </section>
   );
   if (!isLoading) {
