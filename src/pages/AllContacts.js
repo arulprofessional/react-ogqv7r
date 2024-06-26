@@ -31,18 +31,19 @@ export default function AllContactsPage() {
       });
   }, []);
 
-  if (isLoading) {
-    return (
-      <section>
-        <p>Loading...</p>
-      </section>
+  let content = (
+    <section>
+      <p>Loading...</p>
+    </section>
+  );
+  if (!isLoading) {
+    content = (
+      <div>
+        <h1>All Contacts Page</h1>
+        <ContactList items={contactList} />
+      </div>
     );
   }
 
-  return (
-    <Layout>
-      <h1>All Contacts Page</h1>
-      <ContactList items={contactList} />
-    </Layout>
-  );
+  return <Layout>{content}</Layout>;
 }
