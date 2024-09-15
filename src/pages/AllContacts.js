@@ -4,7 +4,7 @@ import Layout from '../components/layout/Layout';
 
 import '../style.css';
 // import spinner from '../images/spinner.gif';
-import spinner from '../images/1_CsJ05WEGfunYMLGfsT2sXA.gif';
+// import spinner from '../images/1_CsJ05WEGfunYMLGfsT2sXA.gif';
 
 export default function AllContactsPage() {
   const [isLoading, setIsLoading] = useState(true);
